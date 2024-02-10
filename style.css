@@ -1,0 +1,318 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(155, 59, 179) 35%, rgb(56, 201, 230) 100%);
+position: relative;
+height: 1400px;
+font-family: 'Poppins', sans-serif;
+
+}
+.parentdiv{
+    height: 1350px;
+    width: 800px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 600px;
+    border-radius: 1.5%;
+    
+}
+.head1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 60px;
+    
+}
+.head{
+    display: flex;
+    flex-direction: row;
+}
+.head h3,
+.head h2 {
+    margin: 9px;
+}
+
+#rupee{
+    height: 20px;
+    width: 20px;
+}
+.field{
+    background-color: rgb(72, 40, 75);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 700px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 3%;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    
+}
+.field h1{
+    color: white;
+    margin-left: 100px;
+    margin-top:10px;
+    font-size: 38px;
+}
+.income{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.expenses{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.field2{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.field-head2 h5,
+.field-head2 #income {
+    margin: 0;
+}
+.field-head3 h5,
+.field-head3 #expense {
+    margin: 0;
+}
+.field-head1 h5,
+.field-head1 #balance {
+    margin: 0;
+}
+
+.field-head1{
+    font-size:30px;
+    margin-left: 150px;
+    margin-top: 16px
+}
+.transaction h3{
+    font-size: 30px;
+    margin-top: 5px
+}
+.transaction {
+    margin-top: 330px;
+    width: 700px;
+    /* border: 1px solid black; */
+    height: 300px;
+    margin-left: 40px;
+    font-weight: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 300px; 
+}
+.transaction ul {
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin: 0; 
+    padding: 0; 
+}
+.transaction h3,
+.transaction ul {
+ margin:0; 
+ padding:10px; 
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  form input:not(#type)
+  {
+    width: 600px;
+    padding: 10px;
+    border: 1px solid #1e1c1c;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    height: 42px;
+    font-size: 1rem;
+    margin-left: 150px;
+  }
+  
+  form button {
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  
+  form div:nth-child(-n + 2) {
+    flex-basis: 100%;
+  }
+  
+  form div:nth-child(n + 3) {
+    flex-basis: calc(50% - 5px);
+  }
+  
+  input#type {
+    appearance: none;
+    position: absolute;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #eee;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .option span {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .option::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: #fff;
+    height: calc(100% - 10px);
+    width: calc(50% - 10px);
+    transform: translateX(5px);
+    border-radius: inherit;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all 200ms;
+  }
+  
+  input#type:checked ~ .option::before {
+    left: 50%;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 10px;
+    position: relative;
+  }
+  
+  ul li:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .name {
+    flex: 1;
+  }
+  
+  .name h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .name p {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .amount {
+    font-weight: 600;
+  }
+  
+  .amount.income {
+    color: yellowgreen;
+  }
+  
+  .amount.expense {
+    color: indianred;
+  }
+  
+  .action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f00;
+    color: #fff;
+    height: 100%;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 300ms;
+  }
+
+
+  #balance{
+    font-size: 60px;
+     margin-left: 170px;
+  }
+  #expense{
+    font-size: 40px;
+  }
+  #income{
+    font-size: 40px;
+  }
+  ul li:hover .action {
+    transform: scaleX(1);
+  }
+  
+  .action svg {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  
+  #status {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .btn{
+    width: 400px;
+    margin-left: 220px;
+    color: white;
+    margin-top: 10px;
+    height: 60px;
+   font-size: 20px;
+    background-color:  rgb(72, 40, 75);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 2%;
+  }
+  .btn:hover{
+    background-color: white;
+    color:  rgb(72, 40, 75);
+    border-color:  rgb(72, 40, 75);
+  }
+  .cursor-ball {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(239, 135, 65);
+    border-radius: 50%;
+    z-index: 9999; /* Ensure it's above other elements */
+    pointer-events: none; /* Make it non-clickable */
+    transition: transform 0.1s ease-out; /* Smooth transition */
+}

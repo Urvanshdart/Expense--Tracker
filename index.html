@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expenses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-ball"></div>
+    
+<div class="parentdiv">
+    <div class="head">
+        <section id="head1">
+         <h3 style="font-size: 30px;">Daily</h3>
+         <h2 style="margin-top: 0; font-weight: 900; font-size: 40px;">Expenses</h2>
+        </section>
+         <img src="pie-chart.png" alt="#" style="height: 80px; width: 80px; margin-top: 20px; margin-left: 20px;">
+    </div>
+
+    <div class="field">
+        <div class="field-head1" style="margin-left: 30px;">
+            <h5 style="font-size: 25px; margin-left: 20px;">Total Balance</h5>
+            <span id="balance">$0.00</span>
+
+        </div>
+
+        <section class="field2">
+            <div class="field-head2">
+                <h5 style="font-size: 20px; margin-left: 30px;">Income</h5>
+                <span id="income">$0.00</span>
+            </div>
+            <div class="field-head3">
+                <h5 style="font-size: 20px; margin-left: 30px;">Expense</h5>
+                <span id="expense">$0.00</span>
+            </div>
+        </section>
+    </div>
+
+    <section class="transaction">
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+    </section>
+
+    <section>
+        <h3 style="font-size: 25px; margin-left: 20px;">Add Transaction</h3>
+        <form id="transactionForm">
+            <div>
+                <label for="type">
+                    <input type="checkbox" name="type" id="type" />
+                    <div class="option">
+                        <span>Expense</span>
+                        <span>Income</span>
+                    </div>
+                </label>
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name"  placeholder="Enter your expense/Income" required />
+            </div>
+            <div>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" placeholder="Enter the amount" required />
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input type="date" name="date" required />
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
